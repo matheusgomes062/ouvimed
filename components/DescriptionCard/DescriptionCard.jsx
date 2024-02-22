@@ -1,16 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Image, Text, TouchableOpacity } from 'react-native';
 
 const DescriptionCard = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleOpen = () => {
+        setIsOpen(true);
+    };
+
+    const handleClose = () => {
+        setIsOpen(false);
+    };
+
     return (
         <View style={styles.container}>
             <Image
                 source={require('../../assets/icon.png')}
                 style={styles.image}
             />
-            <TouchableOpacity style={styles.button}>
-                <Text style={styles.buttonText}>Ver mais</Text>
-            </TouchableOpacity>
+            {isOpen ? (
+                <>
+                    <Text style={styles.descriptionText}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque quae aspernatur exercitationem. Temporibus nesciunt eum molestiae atque earum illum eligendi alias mollitia ullam iure et autem nisi, est exercitationem sit?</Text>
+
+                    <TouchableOpacity style={[styles.button]} onPress={handleClose}>
+                        <Text style={styles.buttonText}>Ver menos</Text>
+                    </TouchableOpacity>
+                </>
+            ) : (
+                <TouchableOpacity style={[styles.button]} onPress={handleOpen}>
+                    <Text style={styles.buttonText}>Ver mais</Text>
+                </TouchableOpacity>
+            )}
         </View>
     );
 };
@@ -18,7 +38,7 @@ const DescriptionCard = () => {
 const styles = {
     container: {
         flexDirection: 'column',
-        alignItems: 'flex-end',
+        alignItems: 'flex-start', // Updated alignment to 'flex-start'
         padding: 10,
         backgroundColor: '#fff',
         borderRadius: 8,
@@ -41,12 +61,17 @@ const styles = {
         paddingVertical: 8,
         paddingHorizontal: 16,
         borderRadius: 20,
+        alignSelf: 'flex-end'
     },
     buttonText: {
         color: '#fff',
         fontSize: 18,
         fontWeight: 'bold',
     },
+    descriptionText: {
+        fontSize: 16,
+        marginBottom: 20,
+    }
 };
 
 export default DescriptionCard;

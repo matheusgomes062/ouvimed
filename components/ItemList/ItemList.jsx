@@ -1,24 +1,32 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { Feather } from '@expo/vector-icons';
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { FontAwesome6, AntDesign } from '@expo/vector-icons';
 
-const ItemList = () => {
-    const items = [
-        { title: 'Item 1', iconLeft: 'user', iconRight: 'chevron-down' },
-        { title: 'Item 2', iconLeft: 'user', iconRight: 'chevron-down' },
-        { title: 'Item 3', iconLeft: 'user', iconRight: 'chevron-down' },
-    ];
+const ItemList = ({ items }) => {
+
+    const [selectedItemId, setSelectedItemId] = useState(null);
+
+    const handleItemClick = (itemId) => {
+        setSelectedItemId(itemId);
+    };
 
     return (
         <View style={styles.container}>
-            {items.map((item, index) => (
-                <View key={index} style={styles.itemContainer}>
+            {items.map((item) => (
+                <TouchableOpacity
+                    key={item.id}
+                    style={[
+                        styles.itemContainer,
+                        selectedItemId === item.id && { backgroundColor: 'lightgray' },
+                    ]}
+                    onPress={() => handleItemClick(item.id)}
+                >
                     <View style={styles.iconTitle}>
-                        <Feather name={item.iconLeft} size={24} color="black" style={styles.icon} />
+                        <AntDesign name={item.iconLeft} size={18} color="black" style={styles.icon} />
                         <Text style={styles.itemTitle}>{item.title}</Text>
                     </View>
-                    <Feather name={item.iconRight} size={24} color="black" style={styles.icon} />
-                </View>
+                    <FontAwesome6 name={item.iconRight} size={18} color="black" style={styles.icon} />
+                </TouchableOpacity>
             ))}
         </View>
     );
@@ -35,7 +43,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         paddingHorizontal: 16,
-        paddingVertical: 8,
+        paddingVertical: 18,
         borderBottomWidth: 1,
         borderBottomColor: 'gray',
     },
