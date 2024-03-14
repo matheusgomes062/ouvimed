@@ -14,9 +14,6 @@ const ItemList = ({ items }) => {
     const [sound, setSound] = useState();
 
     async function playSound(item) {
-        console.log('Loading Sound');
-        console.log(item.group);
-        console.log(item.audio);
         const audioPaths = {
             'ausculta_pulmonar_Crepitaçoes Finais': require('../../assets/audios/ausculta_pulmonar/Crepitaçoes Finais.mp3'),
             'ausculta_pulmonar_Crepitaçoes Grosseiras': require('../../assets/audios/ausculta_pulmonar/Crepitaçoes Grosseiras.mp3'),
@@ -32,10 +29,8 @@ const ItemList = ({ items }) => {
 
         const { sound } = await Audio.Sound.createAsync(audioPath);
 
-        console.log('Setting Sound');
         setSound(sound);
 
-        console.log('Playing Sound');
         await sound.playAsync();
     }
 
