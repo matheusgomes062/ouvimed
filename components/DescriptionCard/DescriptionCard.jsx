@@ -3,6 +3,7 @@ import { View, Image, Text, TouchableOpacity } from 'react-native';
 
 const DescriptionCard = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [descriptionText, setDescriptionText] = useState('');
 
     const handleOpen = () => {
         setIsOpen(true);
@@ -12,6 +13,7 @@ const DescriptionCard = () => {
         setIsOpen(false);
     };
 
+
     return (
         <View style={styles.container}>
             <Image
@@ -20,7 +22,7 @@ const DescriptionCard = () => {
             />
             {isOpen ? (
                 <>
-                    <Text style={styles.descriptionText}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque quae aspernatur exercitationem. Temporibus nesciunt eum molestiae atque earum illum eligendi alias mollitia ullam iure et autem nisi, est exercitationem sit?</Text>
+                    <Text style={styles.descriptionText}>{descriptionText}</Text>
 
                     <TouchableOpacity style={[styles.button]} onPress={handleClose}>
                         <Text style={styles.buttonText}>Ver menos</Text>
