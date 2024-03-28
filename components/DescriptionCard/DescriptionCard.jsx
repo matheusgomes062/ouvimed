@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { View, Image, Text, TouchableOpacity } from 'react-native';
+import { useSelector } from 'react-redux'
 
 const DescriptionCard = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [descriptionText, setDescriptionText] = useState('');
+    const selectedItem = useSelector(state => state.itemList.selectedItem);
 
     const handleOpen = () => {
         setIsOpen(true);
@@ -22,8 +24,9 @@ const DescriptionCard = () => {
             />
             {isOpen ? (
                 <>
-                    <Text style={styles.descriptionText}>{descriptionText}</Text>
+                    <Text style={styles.descriptionTitle}>{selectedItem.title}</Text>
 
+                    <Text style={styles.descriptionText}>{selectedItem.description}</Text>
                     <TouchableOpacity style={[styles.button]} onPress={handleClose}>
                         <Text style={styles.buttonText}>Ver menos</Text>
                     </TouchableOpacity>
@@ -68,6 +71,11 @@ const styles = {
     buttonText: {
         color: '#fff',
         fontSize: 18,
+        fontWeight: 'bold',
+    },
+    descriptionTitle: {
+        fontSize: 20,
+        marginBottom: 10,
         fontWeight: 'bold',
     },
     descriptionText: {

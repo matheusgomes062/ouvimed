@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux'
 import { View, Text, StyleSheet, TouchableOpacity, Button, TouchableHighlight } from 'react-native';
 import { FontAwesome6, AntDesign } from '@expo/vector-icons';
 import { Audio } from 'expo-av';
+import { selectItem } from '../../redux/reducers/itemList/itemListSlice'
 
 const ItemList = ({ items }) => {
-
-    const [selectedItemId, setSelectedItemId] = useState(null);
+    const selectedItem = useSelector(selectItem);
+    const dispatch = useDispatch();
 
     const handleItemClick = (item) => {
         playSound(item)
+        dispatch(selectItem(item))
     };
 
     const [sound, setSound] = useState();
@@ -50,7 +53,7 @@ const ItemList = ({ items }) => {
                     key={item.id}
                     style={[
                         styles.itemContainer,
-                        selectedItemId === item.id && { backgroundColor: 'lightgray' },
+                        selectedItem === item.id && { backgroundColor: 'lightgray' },
                     ]}
                     onPress={() => handleItemClick(item)}
                 >
