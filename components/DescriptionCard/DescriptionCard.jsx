@@ -24,17 +24,27 @@ const DescriptionCard = () => {
             />
             {isOpen ? (
                 <>
-                    <Text style={styles.descriptionTitle}>{selectedItem.title}</Text>
-
-                    <Text style={styles.descriptionText}>{selectedItem.description}</Text>
+                    {
+                        selectedItem.title && selectedItem.description ? (
+                            <>
+                                <Text style={styles.descriptionTitle}>{selectedItem.title}</Text>
+                                <Text style={styles.descriptionText}>{selectedItem.description}</Text>
+                            </>
+                        ) : (
+                            <Text style={styles.descriptionText}>Selecione um áudio para mostrar aqui</Text>
+                        )
+                    }
                     <TouchableOpacity style={[styles.button]} onPress={handleClose}>
                         <Text style={styles.buttonText}>Ver menos</Text>
                     </TouchableOpacity>
                 </>
             ) : (
-                <TouchableOpacity style={[styles.button]} onPress={handleOpen}>
-                    <Text style={styles.buttonText}>Ver mais</Text>
-                </TouchableOpacity>
+                <View style={{display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'space-between', alignItems: 'center'}}>
+                    <Text style={styles.cardTitle}>{selectedItem.title}</Text>
+                    <TouchableOpacity style={[styles.button]} onPress={handleOpen}>
+                        <Text style={styles.buttonText}>Ver mais</Text>
+                    </TouchableOpacity>
+                </View>
             )}
         </View>
     );
@@ -71,6 +81,10 @@ const styles = {
     buttonText: {
         color: '#fff',
         fontSize: 18,
+        fontWeight: 'bold',
+    },
+    cardTitle: {
+        fontSize: 25,
         fontWeight: 'bold',
     },
     descriptionTitle: {

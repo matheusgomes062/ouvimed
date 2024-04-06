@@ -17,15 +17,16 @@ const ItemList = ({ items }) => {
     const [sound, setSound] = useState();
 
     async function playSound(item) {
+        const commonPath = '../../assets/audios/';
         const audioPaths = {
-            'ausculta_pulmonar_Crepitaçoes Finais': require('../../assets/audios/ausculta_pulmonar/Crepitaçoes Finais.mp3'),
-            'ausculta_pulmonar_Crepitaçoes Grosseiras': require('../../assets/audios/ausculta_pulmonar/Crepitaçoes Grosseiras.mp3'),
-            'ausculta_pulmonar_Esfregar Pleural': require('../../assets/audios/ausculta_pulmonar/Esfregar Pleural.mp3'),
-            'ausculta_pulmonar_Respiração Broncovascular': require('../../assets/audios/ausculta_pulmonar/Respiração Broncovascular.mp3'),
-            'ausculta_pulmonar_Respiração Bronquica': require('../../assets/audios/ausculta_pulmonar/Respiração Bronquica.mp3'),
-            'ausculta_pulmonar_Respiração Vesicular': require('../../assets/audios/ausculta_pulmonar/Respiração Vesicular.mp3'),
-            'ausculta_pulmonar_Sibilos': require('../../assets/audios/ausculta_pulmonar/Sibilos.mp3'),
-            'ausculta_pulmonar_Sons de Respiração Reduzida': require('../../assets/audios/ausculta_pulmonar/Sons de Respiração Reduzida.mp3'),
+            'ausculta_pulmonar_Crepitaçoes Finais': require(commonPath + 'ausculta_pulmonar/Crepitaçoes Finais.mp3'),
+            'ausculta_pulmonar_Crepitaçoes Grosseiras': require(commonPath + 'ausculta_pulmonar/Crepitaçoes Grosseiras.mp3'),
+            'ausculta_pulmonar_Esfregar Pleural': require(commonPath + 'ausculta_pulmonar/Esfregar Pleural.mp3'),
+            'ausculta_pulmonar_Respiração Broncovascular': require(commonPath + 'ausculta_pulmonar/Respiração Broncovascular.mp3'),
+            'ausculta_pulmonar_Respiração Bronquica': require(commonPath + 'ausculta_pulmonar/Respiração Bronquica.mp3'),
+            'ausculta_pulmonar_Respiração Vesicular': require(commonPath + 'ausculta_pulmonar/Respiração Vesicular.mp3'),
+            'ausculta_pulmonar_Sibilos': require(commonPath + 'ausculta_pulmonar/Sibilos.mp3'),
+            'ausculta_pulmonar_Sons de Respiração Reduzida': require(commonPath + 'ausculta_pulmonar/Sons de Respiração Reduzida.mp3'),
         };
 
         const audioPath = audioPaths[`${item.group}_${item.audio}`];
