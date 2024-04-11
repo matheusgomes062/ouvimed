@@ -1,21 +1,15 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { useDispatch } from 'react-redux'
+import { setTab } from '../../redux/reducers/tabs/tabsSlice'
 
 const Tabs = () => {
     const [activeTab, setActiveTab] = useState(0);
-    const [itemList, setItemList] = useState([]);
+    const dispatch = useDispatch();
 
     const handleTabClick = (index) => {
         setActiveTab(index);
-
-        // Update the item list based on the selected tab
-        if (index === 0) {
-            setItemList(['Item 1', 'Item 2', 'Item 3']);
-        } else if (index === 1) {
-            setItemList(['Item A', 'Item B', 'Item C']);
-        } else if (index === 2) {
-            setItemList(['Apple', 'Banana', 'Orange']);
-        }
+        dispatch(setTab(index));
     };
 
     return (
@@ -28,7 +22,7 @@ const Tabs = () => {
                     ]}
                     onPress={() => handleTabClick(0)}
                 >
-                    <Text style={[styles.tabButtonText, activeTab === 0 && styles.activeTabButtonText]}>Tab 1</Text>
+                    <Text style={[styles.tabButtonText, activeTab === 0 && styles.activeTabButtonText]}>Pulmonar</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={[
@@ -37,7 +31,7 @@ const Tabs = () => {
                     ]}
                     onPress={() => handleTabClick(1)}
                 >
-                    <Text style={[styles.tabButtonText, activeTab === 1 && styles.activeTabButtonText]}>Tab 2</Text>
+                    <Text style={[styles.tabButtonText, activeTab === 1 && styles.activeTabButtonText]}>Cardíaca</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={[
@@ -46,7 +40,7 @@ const Tabs = () => {
                     ]}
                     onPress={() => handleTabClick(2)}
                 >
-                    <Text style={[styles.tabButtonText, activeTab === 2 && styles.activeTabButtonText]}>Tab 3</Text>
+                    <Text style={[styles.tabButtonText, activeTab === 2 && styles.activeTabButtonText]}>Outros</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -70,6 +64,7 @@ const styles = StyleSheet.create({
     },
     tabButtonText: {
         color: 'white',
+        fontSize: 18,
     },
     activeTabButtonText: {
         color: 'black',

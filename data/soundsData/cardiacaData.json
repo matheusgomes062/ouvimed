@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Crepitaçoes Finais",
+        "iconLeft": "heart",
+        "iconRight": "play",
+        "group": "ausculta_pulmonar",
+        "audio": "Crepitaçoes Finais",
+        "description": "As crepitações finais na ausculta pulmonar referem-se a sons respiratórios anormais que ocorrem no final da inspiração. Elas são caracterizadas por serem mais tardias, de alta frequência e curta duração. Podem estar associadas a diversas condições pulmonares, tais como pneumonia, fibrose pulmonar e insuficiência cardíaca."
+    },
+    {
+        "id": 2,
+        "title": "Crepitaçoes Grosseiras",
+        "iconLeft": "heart",
+        "iconRight": "play",
+        "group": "ausculta_pulmonar",
+        "audio": "Crepitaçoes Grosseiras",
+        "description": "As crepitações grosseiras na ausculta pulmonar são sons mais intensos, de tom mais grave e menos breves, associados às vias aéreas proximais e de maior calibre. Podem estar presentes na bronquite crônica e na asma, sendo caracterizadas por ocorrer no início da inspiração e, por vezes, se estender até a metade da mesma."
+    }
+]

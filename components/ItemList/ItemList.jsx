@@ -3,15 +3,15 @@ import { useSelector, useDispatch } from 'react-redux'
 import { View, Text, StyleSheet, TouchableOpacity, Button, TouchableHighlight } from 'react-native';
 import { FontAwesome6, AntDesign } from '@expo/vector-icons';
 import { Audio } from 'expo-av';
-import { selectItem } from '../../redux/reducers/itemList/itemListSlice'
+import { setSelectItem } from '../../redux/reducers/itemList/itemListSlice'
 
 const ItemList = ({ items }) => {
-    const selectedItem = useSelector(selectItem);
+    const selectedItem = useSelector(setSelectItem);
     const dispatch = useDispatch();
 
     const handleItemClick = (item) => {
         playSound(item)
-        dispatch(selectItem(item))
+        dispatch(setSelectItem(item))
     };
 
     const [sound, setSound] = useState();

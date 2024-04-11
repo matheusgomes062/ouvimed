@@ -8,10 +8,10 @@ const itemListSlice = createSlice({
     name: 'itemList',
     initialState,
     reducers: {
-        selectItem: (state, action) => {state.selectedItem = action.payload},
+        setSelectItem: (state, action) => {state.selectedItem = action.payload},
     },
 });
 
-export const { selectItem } = itemListSlice.actions;
+export const { setSelectItem } = itemListSlice.actions;
 
 export default itemListSlice.reducer;

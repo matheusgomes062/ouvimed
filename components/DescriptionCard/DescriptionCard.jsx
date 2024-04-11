@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux'
 
 const DescriptionCard = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [descriptionText, setDescriptionText] = useState('');
     const selectedItem = useSelector(state => state.itemList.selectedItem);
 
     const handleOpen = () => {
