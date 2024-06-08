@@ -1,20 +1,65 @@
 [
     {
         "id": 1,
-        "title": "Crepitaçoes Finais",
+        "title": "S1 (Primeira Bulha)",
         "iconLeft": "heart",
         "iconRight": "play",
-        "group": "ausculta_pulmonar",
-        "audio": "Crepitaçoes Finais",
-        "description": "As crepitações finais na ausculta pulmonar referem-se a sons respiratórios anormais que ocorrem no final da inspiração. Elas são caracterizadas por serem mais tardias, de alta frequência e curta duração. Podem estar associadas a diversas condições pulmonares, tais como pneumonia, fibrose pulmonar e insuficiência cardíaca."
+        "group": "ausculta_cardíaca",
+        "audio": "S1 (Primeira Bulha)",
+        "description": "As crepitações finais na ausculta pulmonar referem-se a sons respiratórios anormais que ocorrem no final da inspiração. Elas são caracterizadas por serem mais tardias, de alta frequência e curta duração. Podem estar associadas a diversas condições pulmonares, tais como pneumonia, fibrose pulmonar e insuficiência cardíaca.Ocorre no início da sístole ventricular, devido ao fechamento das válvulas mitral e tricúspide. É o som mais intenso e indica o início da contração ventricular."
     },
     {
         "id": 2,
-        "title": "Crepitaçoes Grosseiras",
+        "title": "S2 (Segunda Bulha)",
         "iconLeft": "heart",
         "iconRight": "play",
-        "group": "ausculta_pulmonar",
-        "audio": "Crepitaçoes Grosseiras",
-        "description": "As crepitações grosseiras na ausculta pulmonar são sons mais intensos, de tom mais grave e menos breves, associados às vias aéreas proximais e de maior calibre. Podem estar presentes na bronquite crônica e na asma, sendo caracterizadas por ocorrer no início da inspiração e, por vezes, se estender até a metade da mesma."
+        "group": "ausculta_cardíaca",
+        "audio": "S2 (Segunda Bulha)",
+        "description": "Ocorre no início da diástole ventricular, devido ao fechamento das válvulas aórtica e pulmonar. Indica o início do relaxamento ventricular."
+    },
+	{
+        "id": 3,
+        "title": "S3 (Terceira Bulha)",
+        "iconLeft": "heart",
+        "iconRight": "play",
+        "group": "ausculta_cardíaca",
+        "audio": "S3 (Terceira Bulha)",
+        "description": "Som de baixa frequência que ocorre no início da diástole ventricular, devido à rápida entrada de sangue nos ventrículos. Pode ser ouvido em crianças e adultos jovens normais, mas sua presença em adultos sugere disfunção ventricular esquerda."
+    },
+	{
+        "id": 4,
+        "title": "S4 (Quarta Bulha)",
+        "iconLeft": "heart",
+        "iconRight": "play",
+        "group": "ausculta_cardíaca",
+        "audio": "S4 (Quarta Bulha)",
+        "description": "Som de baixa frequência que ocorre no final da diástole ventricular, devido à contração atrial. Sua presença sugere rigidez ventricular esquerda."
+    },
+	{
+        "id": 5,
+        "title": "Sopros Sistólicos",
+        "iconLeft": "heart",
+        "iconRight": "play",
+        "group": "ausculta_cardíaca",
+        "audio": "Sopros Sistólicos",
+        "description": "Ocorrem durante a sístole ventricular. Podem indicar estenose ou regurgitação valvar."
+    },
+	{
+        "id": 6,
+        "title": "Sopros Diastólicos",
+        "iconLeft": "heart",
+        "iconRight": "play",
+        "group": "ausculta_cardíaca",
+        "audio": "Sopros Diastólicos",
+        "description": "Ocorrem durante a diástole ventricular. Geralmente indicam estenose ou regurgitação valvar."
+    },
+	{
+        "id": 7,
+        "title": "Sopros Contínuos",
+        "iconLeft": "heart",
+        "iconRight": "play",
+        "group": "ausculta_cardíaca",
+        "audio": "Sopros Contínuos",
+        "description": "Começam no final da sístole e continuam durante a diástole. Podem indicar persistência do canal arterial ou fístula arteriovenosa."
     }
 ]

@@ -1,33 +1,24 @@
 [
     {
         "id": 1,
-        "title": "Crepitaçoes Finais",
+        "title": "Crepitações Finais",
         "iconLeft": "heart",
         "iconRight": "play",
         "group": "ausculta_pulmonar",
-        "audio": "Crepitaçoes Finais",
+        "audio": "Crepitações Finais",
         "description": "As crepitações finais na ausculta pulmonar referem-se a sons respiratórios anormais que ocorrem no final da inspiração. Elas são caracterizadas por serem mais tardias, de alta frequência e curta duração. Podem estar associadas a diversas condições pulmonares, tais como pneumonia, fibrose pulmonar e insuficiência cardíaca."
     },
     {
         "id": 2,
-        "title": "Crepitaçoes Grosseiras",
+        "title": "Crepitações Grosseiras",
         "iconLeft": "heart",
         "iconRight": "play",
         "group": "ausculta_pulmonar",
-        "audio": "Crepitaçoes Grosseiras",
+        "audio": "Crepitações Grosseiras",
         "description": "As crepitações grosseiras na ausculta pulmonar são sons mais intensos, de tom mais grave e menos breves, associados às vias aéreas proximais e de maior calibre. Podem estar presentes na bronquite crônica e na asma, sendo caracterizadas por ocorrer no início da inspiração e, por vezes, se estender até a metade da mesma."
     },
     {
         "id": 3,
-        "title": "Esfregar Pleural",
-        "iconLeft": "heart",
-        "iconRight": "play",
-        "group": "ausculta_pulmonar",
-        "audio": "Esfregar Pleural",
-        "description": "O esfregar pleural, ou atrito pleural, é um som áspero e localizado, causado pela fricção da pleura parietal sobre a pleura visceral durante o ciclo respiratório. Esse som é melhor auscultado durante a expiração e pode ser um indicativo de condições como pleurite, derrame pleural ou pneumotórax."
-    },
-    {
-        "id": 4,
         "title": "Respiração Broncovascular",
         "iconLeft": "heart",
         "iconRight": "play",
@@ -36,7 +27,7 @@
         "description": "Caracterizado por ser alto e de tom intermediário. Esse som é produzido quando o ar passa por vias aéreas parcialmente obstruídas, como os brônquios, e pode ser ouvido durante a inspiração e expiração. A respiração broncovascular é um sinal de obstrução parcial das vias aéreas e pode estar associada a diferentes condições pulmonares."
     },
     {
-        "id": 5,
+        "id": 4,
         "title": "Respiração Bronquica",
         "iconLeft": "heart",
         "iconRight": "play",
@@ -45,7 +36,7 @@
         "description": "Caracterizado por ser alto e semelhante a um sopro. Esse som é produzido quando o ar passa por vias aéreas estreitadas ou obstruídas, como os brônquios, e pode ser ouvido durante a inspiração e expiração. A respiração brônquica é um sinal de obstrução das vias aéreas e pode estar associada a diferentes condições pulmonares."
     },
     {
-        "id": 6,
+        "id": 5,
         "title": "Respiração Vesicular",
         "iconLeft": "heart",
         "iconRight": "play",
@@ -54,7 +45,7 @@
         "description": "Caracterizado por ser suave e de baixa frequência. Esse som é produzido pela passagem do ar pelos alvéolos pulmonares e é ouvido durante a inspiração e expiração. A ausência ou diminuição da respiração vesicular pode ser um sinal de obstrução das vias aéreas ou de outras condições pulmonares."
     },
     {
-        "id": 7,
+        "id": 6,
         "title": "Sibilos",
         "iconLeft": "heart",
         "iconRight": "play",
@@ -63,7 +54,7 @@
         "description": "Sibilos são sons agudos e contínuos, semelhantes a um assobio, que ocorrem durante a inspiração ou expiração. Eles são causados pela passagem de ar através de vias aéreas estreitadas ou obstruídas, como ocorre na asma, bronquite crônica e reações alérgicas graves. Os sibilos podem ser ouvidos em todos os campos pulmonares, mas são mais comuns nos campos posteriores."
     },
     {
-        "id": 8,
+        "id": 7,
         "title": "Sons de Respiração Reduzida",
         "iconLeft": "heart",
         "iconRight": "play",

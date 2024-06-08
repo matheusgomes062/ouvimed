@@ -19,8 +19,8 @@ const ItemList = ({ items }) => {
     async function playSound(item) {
         const commonPath = '../../assets/audios/';
         const audioPaths = {
-            'ausculta_pulmonar_Crepitaçoes Finais': require(commonPath + 'ausculta_pulmonar/Crepitaçoes Finais.mp3'),
-            'ausculta_pulmonar_Crepitaçoes Grosseiras': require(commonPath + 'ausculta_pulmonar/Crepitaçoes Grosseiras.mp3'),
+            'ausculta_pulmonar_Crepitações Finais': require(commonPath + 'ausculta_pulmonar/Crepitações Finais.mp3'),
+            'ausculta_pulmonar_Crepitações Grosseiras': require(commonPath + 'ausculta_pulmonar/Crepitações Grosseiras.mp3'),
             'ausculta_pulmonar_Esfregar Pleural': require(commonPath + 'ausculta_pulmonar/Esfregar Pleural.mp3'),
             'ausculta_pulmonar_Respiração Broncovascular': require(commonPath + 'ausculta_pulmonar/Respiração Broncovascular.mp3'),
             'ausculta_pulmonar_Respiração Bronquica': require(commonPath + 'ausculta_pulmonar/Respiração Bronquica.mp3'),
